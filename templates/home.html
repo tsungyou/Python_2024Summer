@@ -29,13 +29,8 @@
 <body>
     <div class="container custom-table-container">
         <div id="map"></div>
-        <h1 class="text-center">Dynamic Table</h1>
+        <h1 class="text-center">Table 1</h1>
         
-        <!-- Navigation Buttons -->
-        <div class="text-center mb-3">
-            <a href="/maps" class="btn btn-secondary">View Maps</a>
-        </div>
-
         <!-- Filter Form -->
         <form method="POST" class="mb-3">
             <div class="row g-3">
@@ -88,7 +83,10 @@
         let marker;
         let directionsService;
         let directionsRenderer;
-        let defaultLocation = { lat: 25.0330, lng: 121.4654 };  // Your default location
+        let defaultLocation = { 
+            lat: Number('{{ init_lat }}'), 
+            lng: Number('{{ init_lng }}') 
+        };  // Your default location
         let currentMarker;
 
         function initMap() {

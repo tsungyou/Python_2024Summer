@@ -26,7 +26,13 @@ def homePage():
             print("date", e)
     table_json = df.to_dict(orient="records")
     columns = df.columns.tolist()
-    return render_template('home.html', table=table_json, columns=columns, google_maps_api_key=google_map_api_key)
+    return render_template(
+        'home.html', 
+        table=table_json, 
+        columns=columns, 
+        google_maps_api_key=google_map_api_key,
+        init_lat = default_lat,
+        init_lng = default_lng)
 
 @app.route("/maps", methods=["GET", "POST"])
 def homeWithMaps():
