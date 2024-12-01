@@ -27,5 +27,13 @@ def homePage():
     columns = df.columns.tolist()
     return render_template('home.html', table=table_json, columns=columns)
 
+@app.route("/maps", methods=["GET", "POST"])
+def homeWithMaps():
+    return render_template('home_maps.html', google_maps_api_key=google_map_api_key)
+
+@app.route("/maps1", methods=["GET", "POST"])
+def homeMapGV():
+    return render_template('home1.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

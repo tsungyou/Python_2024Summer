@@ -1,0 +1,28 @@
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container custom-table-container">
+        <!-- ... existing table content ... -->
+        <div id="map"></div>
+    </div>
+
+    <script>
+        function initMap() {
+            new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: { lat: 40.7128, lng: -74.0060 }  // New York City coordinates
+            });
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">
+    </script>
+</body>
