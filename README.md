@@ -1,5 +1,5 @@
 # Python_2024Summer
-
+![Sample Screenshot](sample.jpg)
 ## Structure
 1. raw_data: chatGPT資料
 2. database: 資料庫
